@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="objectstructures.StopWatchManagerController">
+	<HBox>
+		<VBox>
+			<fx:include fx:id="stopWatch1" source="StopWatch.fxml"/>
+			<Button text="Remove 1" onAction="#handleRemove1Action"/>
+		</VBox>
+		<VBox>
+			<fx:include fx:id="stopWatch2" source="StopWatch.fxml"/>
+			<Button text="Remove 2" onAction="#handleRemove2Action"/>
+		</VBox>
+		<VBox>
+			<fx:include fx:id="stopWatch3" source="StopWatch.fxml"/>
+			<Button text="Remove 3" onAction="#handleRemove3Action"/>
+		</VBox>
+	</HBox>
+	<HBox>
+		<Button text="Start all" onAction="#handleStartAction"/>
+		<Button text="Lap all" onAction="#handleLapAction"/>
+		<Button text="Stop all" onAction="#handleStopAction"/>
+	</HBox>
+</VBox>

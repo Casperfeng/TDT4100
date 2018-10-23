@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.shape.*?>
+
+<VBox spacing="15" style="-fx-padding: 10px 10px 10px 10px" xmlns:fx="http://javafx.com/fxml/1" fx:controller="encapsulation.CardDeckController">
+	<HBox spacing="10" style="-fx-border-color: transparent transparent black transparent; -fx-padding: 0px 0px 10px 0px; -fx-border-width: 2;">
+		<Label text="Suit size" />
+		<TextField fx:id="suitSizeTextField" />
+		<Button text="New deck" onAction="#handleNewDeck" />
+	</HBox>
+	<Text text="CardDeck - toString">
+    	<font>
+            <Font name="Arial Black" size="16.0" />
+        </font>
+    </Text>	
+	<TextArea fx:id="toStringTextArea" />
+	<Button text="Shuffle" onAction="#handleShuffle" fx:id="shuffleButton" />
+</VBox>
+

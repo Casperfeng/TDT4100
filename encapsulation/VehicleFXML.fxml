@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.shape.*?>
+<?import javafx.scene.control.TextArea?>
+
+<HBox spacing="15" style="-fx-padding: 10px 10px 10px 10px" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="encapsulation.VehicleController">
+	
+	<VBox minWidth="400" spacing="15">	    
+	    <Text text="Vehicle">
+	    	<font>
+                <Font name="Arial Black" size="16.0" />
+            </font>
+	    </Text>
+	    
+	    <HBox spacing="10">
+	    	<Label text="Vehicle Type" />
+	    	<TextField fx:id="getVehicleTextField" />
+	    </HBox>
+	    
+	    <HBox spacing="10">
+	    	<Label text="Fuel Type" />
+	    	<TextField fx:id="getFuelTextField" />
+	    </HBox>
+	    
+	    <HBox spacing="10">
+	    	<Label text="Registration number" />
+	    	<TextField fx:id="getRNTextField" />
+	    </HBox>
+	    
+	    <HBox spacing="10" />
+		
+		<HBox spacing="10" style="-fx-border-color: transparent transparent black transparent; -fx-padding: 0px 0px 10px 0px;" />
+	    
+	    <Text text="Create new Vehicle">
+	    	<font>
+                <Font name="Arial Black" size="14.0" />
+            </font>
+	    </Text>
+	    
+	    <HBox spacing="10">
+    		<Label text="Vehicle Type" />
+    		<TextField fx:id="setVehicleTextField" />
+    	</HBox>
+    	
+    	<HBox spacing="10">
+    		<Label text="Fuel Type" />
+    		<TextField fx:id="setFuelTextField" />
+    	</HBox>
+    	
+    	<HBox spacing="10">
+    		<Label text="Registration Number" />
+    		<TextField fx:id="setRNTextField" />
+    	</HBox>
+    	
+    	<HBox spacing="10" />
+ 		<Button onAction="#create" prefHeight="26.0" prefWidth="128.0" text="Create Vehicle" />
+    	
+    	<HBox spacing="10" />
+		
+	</VBox>
+	
+	<VBox>
+		<Text text="Exception:">
+	    	<font>
+                <Font name="Arial Black" size="14.0" />
+            </font>
+	    </Text>
+		<TextArea fx:id="exceptionTextArea" prefRowCount="30" />
+	</VBox>
+</HBox>

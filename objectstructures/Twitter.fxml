@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="618.0" style="-fx-padding: 10px;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="objectstructures.TwitterController">
+   <children>
+      <HBox prefHeight="396.0" prefWidth="580.0" style="-fx-border-color: #bbbbbb; -fx-border-width: 1px;">
+         <children>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="380.0" prefWidth="170.0">
+               <children>
+                  <VBox prefHeight="378.0" prefWidth="168.0">
+                     <children>
+                        <AnchorPane prefHeight="126.0" prefWidth="168.0">
+                           <children>
+                              <Label fx:id="account1Name" alignment="CENTER" layoutY="4.0" prefHeight="21.0" prefWidth="168.0" text="Account1" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="acc1TweetCount" alignment="CENTER" layoutY="71.0" prefHeight="16.0" prefWidth="168.0" text="TweetCount: 0" textAlignment="CENTER" />
+                              <Label fx:id="acc1RetweetCount" alignment="CENTER" layoutY="87.0" prefHeight="16.0" prefWidth="168.0" text="RetweetCount: 0" textAlignment="CENTER" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="126.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="account2Name" alignment="CENTER" layoutY="4.0" prefHeight="21.0" prefWidth="168.0" text="Account2" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="acc2TweetCount" alignment="CENTER" layoutX="3.0" layoutY="71.0" prefHeight="16.0" prefWidth="168.0" text="TweetCount: 0" textAlignment="CENTER" />
+                              <Label fx:id="acc2RetweetCount" alignment="CENTER" layoutX="3.0" layoutY="87.0" prefHeight="16.0" prefWidth="168.0" text="RetweetCount: 0" textAlignment="CENTER" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="126.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="account3Name" alignment="CENTER" layoutY="4.0" prefHeight="21.0" prefWidth="168.0" text="Account3" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="acc3TweetCount" alignment="CENTER" layoutY="71.0" prefHeight="16.0" prefWidth="168.0" text="TweetCount: 0" textAlignment="CENTER" />
+                              <Label fx:id="acc3RetweetCount" alignment="CENTER" layoutY="87.0" prefHeight="16.0" prefWidth="168.0" text="RetweetCount: 0" textAlignment="CENTER" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="380.0" prefWidth="161.0">
+               <children>
+                  <VBox prefHeight="380.0" prefWidth="161.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="190.0" prefWidth="161.0">
+                           <children>
+                              <TextArea fx:id="tweetInput" layoutX="1.0" prefHeight="116.0" prefWidth="157.0" wrapText="true" />
+                              <ComboBox fx:id="tweetInputComboBox" layoutX="4.0" layoutY="116.0" prefWidth="150.0" promptText="Choose account" />
+                              <Button layoutX="51.0" layoutY="151.0" mnemonicParsing="false" onAction="#createTweet" text="Tweet" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="190.0" prefWidth="161.0">
+                           <children>
+                              <ComboBox fx:id="retweetTweetComboBox" layoutX="4.0" layoutY="35.0" prefWidth="150.0" promptText="Choose tweet" />
+                              <ComboBox fx:id="retweetAccountComboBox" layoutX="4.0" layoutY="79.0" prefWidth="150.0" promptText="Choose account" />
+                              <Button layoutX="43.0" layoutY="129.0" mnemonicParsing="false" onAction="#createRetweet" text="Retweet" />
+                              <Line endX="161.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="380.0" prefWidth="250.0">
+               <children>
+                  <GridPane layoutX="10.0" prefHeight="378.0" prefWidth="256.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-12.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #bbbbbb; -fx-border-width: 1px;">
+                           <children>
+                              <Label fx:id="tweet1Title" alignment="CENTER" layoutY="14.0" prefHeight="16.0" prefWidth="128.0" />
+                              <Label fx:id="tweet1Text" alignment="TOP_CENTER" layoutX="4.0" layoutY="42.0" prefHeight="90.0" prefWidth="123.0" textOverrun="WORD_ELLIPSIS" wrapText="true" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="41.0" />
+                              <Label fx:id="tweet1TweetedBy" alignment="CENTER" layoutY="157.0" prefHeight="16.0" prefWidth="128.0" />
+                              <Label fx:id="tweet1RetweetedBy" alignment="CENTER" layoutY="173.0" prefHeight="16.0" prefWidth="128.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #bbbbbb; -fx-border-width: 1px;" GridPane.rowIndex="1">
+                           <children>
+                              <Label fx:id="tweet3Title" alignment="CENTER" layoutY="14.0" prefHeight="16.0" prefWidth="128.0" />
+                              <Label fx:id="tweet3Text" alignment="TOP_CENTER" layoutX="4.0" layoutY="42.0" prefHeight="90.0" prefWidth="123.0" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="41.0" />
+                              <Label fx:id="tweet3TweetedBy" alignment="CENTER" layoutY="157.0" prefHeight="16.0" prefWidth="128.0" />
+                              <Label fx:id="tweet3RetweetedBy" alignment="CENTER" layoutY="173.0" prefHeight="16.0" prefWidth="128.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #bbbbbb; -fx-border-width: 1px;" GridPane.columnIndex="1">
+                           <children>
+                              <Label fx:id="tweet2Title" alignment="CENTER" layoutY="14.0" prefHeight="16.0" prefWidth="128.0" />
+                              <Label fx:id="tweet2Text" alignment="TOP_CENTER" layoutX="4.0" layoutY="42.0" prefHeight="90.0" prefWidth="123.0" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="41.0" />
+                              <Label fx:id="tweet2TweetedBy" alignment="CENTER" layoutY="157.0" prefHeight="16.0" prefWidth="128.0" />
+                              <Label fx:id="tweet2RetweetedBy" alignment="CENTER" layoutY="173.0" prefHeight="16.0" prefWidth="128.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #bbbbbb; -fx-border-width: 1px;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label fx:id="tweet4Title" alignment="CENTER" layoutY="14.0" prefHeight="16.0" prefWidth="128.0" />
+                              <Label fx:id="tweet4Text" alignment="TOP_CENTER" layoutX="4.0" layoutY="42.0" prefHeight="90.0" prefWidth="123.0" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="41.0" />
+                              <Label fx:id="tweet4TweetedBy" alignment="CENTER" layoutY="157.0" prefHeight="16.0" prefWidth="128.0" />
+                              <Label fx:id="tweet4RetweetedBy" alignment="CENTER" layoutY="173.0" prefHeight="16.0" prefWidth="128.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

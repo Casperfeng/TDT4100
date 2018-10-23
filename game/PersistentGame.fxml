@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.shape.*?>
+
+
+<VBox spacing="15" style="-fx-padding: 20px 20px 20px 20px" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.PersistentGameController">
+	<HBox spacing="10" alignment="CENTER">
+	   <Label text="Input" />
+	   <TextField fx:id="inputField" />
+	   <Button onAction="#sendInput" text="Send Input" />
+	</HBox>
+	<!-- Hvis du oensker aa endre stoerrelsen paa konsollen kan det gjoeres ved endre prefRowCount and prefColumnCount paa linja under -->
+	<TextArea fx:id="console" prefRowCount="20" prefColumnCount="30" style="-fx-font-family: monospace">
+	</TextArea>
+	<HBox spacing="50" alignment="CENTER">
+		<HBox spacing="10" alignment="CENTER_LEFT">
+			<Button text="Undo" onAction="#undo" />
+			<Button text="Redo" onAction="#redo" />
+		</HBox>
+		<VBox spacing="10">
+			<HBox spacing="10" alignment="CENTER">
+				<Label text="File name" />
+				<TextField fx:id="fileName" />
+			</HBox>
+			<HBox spacing="10" alignment="CENTER">
+				<Button text="Save" onAction="#save" />
+				<Button text="Load" onAction="#load" />
+			</HBox>
+		</VBox>
+	</HBox>
+</VBox>
